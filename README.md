@@ -1,63 +1,71 @@
-# MeetAI – Meeting Intelligence Platform
+# MeetAI — Intelligent Meeting Analysis & Knowledge Platform
 
-MeetAI is an AI-powered meeting intelligence platform that transforms meeting conversations into useful and actionable information.
+> **Turn meeting conversations into structured insights, actionable tasks, and searchable knowledge.**
 
-## Features
+MeetAI is a full-stack meeting intelligence platform designed to transform meeting conversations into structured and actionable information.
 
-- Meeting management
-- Meeting summaries
-- Action item extraction
-- Decision tracking
-- Topic and discussion tracking
-- AI Assistant
-- Knowledge Search
-- Analytics Dashboard
-- Meeting history
+Instead of leaving important decisions, tasks, discussion topics, and meeting context buried inside lengthy conversations, MeetAI automatically analyzes meeting transcripts and presents meaningful insights through a unified workspace.
 
-## Technology Stack
+The platform combines a modern React and TypeScript frontend with Supabase-powered backend services, automated meeting analysis, transcript-based knowledge retrieval, analytics, and an interactive meeting assistant.
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Supabase
-- PostgreSQL
+---
 
-## Database
+## 🎯 Problem Statement
 
-Supabase is used for authentication and database management.
+Meetings contain valuable information, but much of that information becomes difficult to retrieve after the meeting ends.
 
-Main tables:
+Important details such as:
 
-- profiles
-- meetings
-- transcripts
-- action_items
-- decisions
-- topics
+- Decisions
+- Action items
+- Responsibilities
+- Deadlines
+- Discussion topics
+- Sentiment
+- Meeting context
 
-## How It Works
+can easily become buried inside long conversations.
 
-1. User signs in to MeetAI.
-2. User creates or uploads meeting information.
-3. Meeting data is processed by the platform.
-4. AI extracts useful information.
-5. The platform displays summaries, action items, decisions and insights.
-6. Users can search and analyze previous meetings.
+Traditional meeting workflows often require users to manually review transcripts or notes to find this information.
 
-## Project Structure
+### MeetAI addresses this problem by transforming:
+
+**Conversation → Structured Intelligence → Actionable Knowledge**
+
+---
+
+## 💡 Our Approach
+
+MeetAI processes meeting conversations through an automated intelligence pipeline.
 
 ```text
-src/
-├── components/
-├── context/
-├── layouts/
-├── lib/
-├── pages/
-├── types/
-├── App.tsx
-├── main.tsx
-└── index.css
-
-supabase/
-└── migrations/
+                    MEETING
+                       │
+                       ▼
+                  RECORDING
+                       │
+                       ▼
+                 TRANSCRIPTION
+                       │
+                       ▼
+             MEETING INTELLIGENCE
+                       │
+        ┌──────────────┼──────────────┐
+        ▼              ▼              ▼
+     SUMMARY       DECISIONS       TOPICS
+        │              │              │
+        └──────────────┼──────────────┘
+                       │
+             ┌─────────┴─────────┐
+             ▼                   ▼
+       ACTION ITEMS          SENTIMENT
+             │                   │
+             └─────────┬─────────┘
+                       ▼
+               STRUCTURED INSIGHTS
+                       │
+                       ▼
+             KNOWLEDGE RETRIEVAL
+                       │
+                       ▼
+                MEETING ASSISTANT
